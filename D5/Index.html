@@ -1,0 +1,54 @@
+var rollDie = getRandomizer( 1, 6 );
+
+var results = ""
+for ( var i = 0; i<1000; i++ ) {
+    results += rollDie() + " ";    //make a string filled with 1000 random numbers in the range 1-6.
+}
+
+
+
+
+
+/* Ex.4
+    Write the function deleteOne that receives a string and a boolean. If the boolean is true it should return the string without the first letter, otherwise it should remove the last one.
+*/
+
+
+
+let  deleteOne = function (MyString,MyBoolean) {
+    if(MyBoolean){
+        
+            let myModifiedString = MyString.slice( 1 );
+            return myModifiedString
+        
+        
+    }
+    else{
+        
+            let myModifiedString = MyString.slice(0, MyString.length - 1);
+            return myModifiedString
+        
+        
+    }
+} 
+        console.log(deleteOne("Dilmurod", false))
+
+
+
+
+
+
+        /* Ex.7
+   Write the function whatDayIsIt that should return the current day of the week.
+*/
+
+const whatDayIsIt = function (){
+    var arrayOfWeekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
+    var dateObj = new Date()
+    var weekdayNumber = dateObj.getDay()
+    var weekdayName = arrayOfWeekdays[weekdayNumber]
+    return weekdayName
+}
+
+console.log(whatDayIsIt())
